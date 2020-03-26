@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Map;
@@ -30,6 +31,18 @@ public class ItemsController {
         String sql = "select * from items";
         List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
         return list;
+    }
+    /**
+     * @return
+     * 查询全部信息页面
+     */
+    @RequestMapping("/listPage")
+    public ModelAndView itemsListPage() {
+        String sql = "select * from items";
+        List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
+        ModelAndView mav = new ModelAndView("items");
+        mav.addObject("list", list);
+        return mav;
     }
 
     /**
