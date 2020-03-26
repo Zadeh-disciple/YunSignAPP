@@ -46,6 +46,31 @@ public class ItemsController {
     }
 
     /**
+     * @return
+     * 跳转到新增接界面
+     */
+    @RequestMapping("/toAdd")
+    public ModelAndView  toAdd() {
+        ModelAndView mav = new ModelAndView("add");
+        return mav;
+    }
+    /**
+     * 新增数据
+     * @param items
+     * @return
+     */
+    @RequestMapping("/add")
+    public @ResponseBody boolean  addItems(Items items) {
+        String sql = "insert into items (title,name,detail) value (?,?,?)";
+        Object args[] = {items.getTitle(),items.getName(),items.getDetail()};
+        int temp = jdbcTemplate.update(sql, args);
+        if(temp > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * @param id
      * @return
      * 根据ID查询单条信息
@@ -58,22 +83,22 @@ public class ItemsController {
         return map;
     }
 
-    /**
-     * 新增数据
-     * @param items
-     * @return
-     */
-    @RequestMapping("/add")
-    public @ResponseBody
-    String  addItems(Items items) {
-        String sql = "insert into items (id,title,name,detail) value (?,?,?,?)";
-        Object args[] = {items.getId(),items.getTitle(),items.getName(),items.getDetail()};
-        int temp = jdbcTemplate.update(sql, args);
-        if(temp > 0) {
-            return "文章新增成功";
-        }
-        return "新增出现错误";
-    }
+//    /**
+//     * 新增数据
+//     * @param items
+//     * @return
+//     */
+//    @RequestMapping("/add")
+//    public @ResponseBody
+//    String  addItems(Items items) {
+//        String sql = "insert into items (id,title,name,detail) value (?,?,?,?)";
+//        Object args[] = {items.getId(),items.getTitle(),items.getName(),items.getDetail()};
+//        int temp = jdbcTemplate.update(sql, args);
+//        if(temp > 0) {
+//            return "文章新增成功";
+//        }
+//        return "新增出现错误";
+//    }
 
     /**
      * @param items
