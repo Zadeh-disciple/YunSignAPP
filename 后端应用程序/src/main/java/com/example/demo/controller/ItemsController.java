@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+﻿package com.example.demo.controller;
 
 
 import com.example.demo.entity.Items;
@@ -16,7 +16,8 @@ import java.util.Map;
 
 @ComponentScan
 @RestController
-@RequestMapping("/items")
+//@RequestMapping("/items")
+//@RequestMapping("/User")
 public class ItemsController {
 
     @Autowired
@@ -36,7 +37,7 @@ public class ItemsController {
      * @return
      * 查询全部信息页面
      */
-    @RequestMapping("/listPage")
+    @RequestMapping("/login")
     public ModelAndView itemsListPage() {
         String sql = "select * from items";
         List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
@@ -95,7 +96,7 @@ public class ItemsController {
 //        Object args[] = {items.getId(),items.getTitle(),items.getName(),items.getDetail()};
 //        int temp = jdbcTemplate.update(sql, args);
 //        if(temp > 0) {
-//            return "文章新增成功";
+//            return "新增成功";
 //        }
 //        return "新增出现错误";
 //    }
@@ -111,7 +112,7 @@ public class ItemsController {
         Object args[] = {items.getId()};
         int temp = jdbcTemplate.update(sql, args);
         if(temp > 0) {
-            return "文章删除成功";
+            return "删除成功";
         }
         return "删除出现错误";
     }
@@ -127,7 +128,7 @@ public class ItemsController {
         Object args[] = {items.getTitle(),items.getDetail(),items.getId()};
         int temp = jdbcTemplate.update(sql, args);
         if(temp > 0) {
-            return "文章修改成功";
+            return "修改成功";
         }
         return "修改出现错误";
     }
