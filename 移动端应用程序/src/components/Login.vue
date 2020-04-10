@@ -28,12 +28,12 @@
 export default {
   data () {
     return {
-      // 数据绑定
+      // 数据 绑定
       loginForm: {
         username: 'admin',
         password: '123456'
       },
-      // 登录规则
+      // 登录 规则
       loginFormRules: {
         username: [
           { required: true, message: '请输入用户名', trigger: 'blur' }

@@ -4,7 +4,7 @@
       <div class="avatar_box">
         <img src="../assets/logo.png" alt="">
       </div>
-      <!-- 表单 -->
+      <!-- 表 单 -->
       <el-form :model="forgetForm" :rules="forgetFormRules" label-width="0px" class="forpwd_form">
         <el-form-item prop="telephone">
           <el-input placeholder="请输入手机号" v-model="forgetForm.telephone" prefix-icon="el-icon-phone"></el-input>
