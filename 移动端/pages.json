@@ -1,11 +1,31 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-	    {
+		{
+		    "path" : "pages/course/joincourse",
+		    "style" : {
+				"navigationBarTitleText": "搜索班课"
+			}
+		},
+		{
+		    "path" : "pages/course/join",
+		    "style" : {
+				"navigationBarTitleText": "加入班课"
+			}
+		},
+		{
             "path": "pages/login/login",
             "style" : {
 				"navigationBarTitleText": "登录"
 			}
-        },{
+        },
+
+		{
+			"path": "pages/index/indexme",
+			"style" : {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
             "path" : "pages/login/register",
             "style" : {
 				"navigationBarTitleText": "注册"
@@ -21,14 +41,22 @@
 				"navigationBarTitleText": "登出"
 			}
         },{
-            "path" : "pages/mpvue-gesture-lock/mpvue-gesture-lock",
+            "path" : "pages/gesture/gesture",
             "style" : {
 				"navigationBarTitleText": "手势签到"
 			}
         }
         ,{
-            "path" : "pages/mpvue-gesture-lock/student_gesture",
-            "style" : {}
+            "path" : "pages/find/find",
+            "style" : {
+				"navigationBarTitleText": "发现"
+			}
+        }
+        ,{
+            "path" : "pages/course/course",
+            "style" : {
+				"navigationBarTitleText": "班课"
+			}
         }
     ],
 	"globalStyle": {
@@ -37,24 +65,26 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-    "tabBar" : {
-        "color" : "#7A7E83",
-        "selectedColor" : "#007AFF",
-        "borderStyle" : "black",
-        "backgroundColor" : "#F8F8F8",
-        "list" : [
-            {
-                "pagePath" : "pages/index/index",
-                "iconPath" : "static/tab_home.png",
-                "selectedIconPath" : "static/tab_home_s.png",
-                "text" : "主页"
-            },
-            {
-                "pagePath" : "pages/index/indexme",
-                "iconPath" : "static/tab_me.png",
-                "selectedIconPath" : "static/tab_me_s.png",
-                "text" : "我"
-            }
-        ]
-    }
+	"tabBar": {
+		"list": [
+			{
+				"text":"班课",
+				"pagePath":"pages/course/course",
+				"iconPath":"static/tabs/cloud.png",
+				"selectedIconPath":"static/tabs/cloud-active.png"
+			},
+			{
+				"text":"发现",
+				"pagePath":"pages/find/find",
+				"iconPath":"static/tabs/find.png",
+				"selectedIconPath":"static/tabs/find-active.png"
+			},
+			{
+				"text":"我的",
+				"pagePath":"pages/index/indexme",
+				"iconPath":"static/tabs/user.png",
+				"selectedIconPath":"static/tabs/user-active.png"
+			}
+		]
+	}
 }
