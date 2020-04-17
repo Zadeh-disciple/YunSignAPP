@@ -5,8 +5,8 @@
 <script>
 	export default {
 		name:"member",
-		data() {
-		}
+		// data() {
+		// }
 	}
 </script>
 

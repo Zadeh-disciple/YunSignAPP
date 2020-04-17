@@ -1,30 +1,24 @@
 <template>
-	<view class="list-all">
-		<view class="list-top">
-			<view>
-				<image style="width: 50px; height: 50px; padding-left: 10px;" src="../../static/logo.png"></image>
-			</view>
-			<view class="name">Jack</view>
-			<view class="to">
-				<uni-icons type="arrowright" size="30"></uni-icons>
-			</view>
-		</view>
+	<view class="commom">
+		<uni-list>
+		    <uni-list-item title="Jack" thumb="../../static/logo.png"></uni-list-item>
+		</uni-list>
 		<view class="list-top">
 			<view class="note">
-				<text style="display: inline-block; text-align: center; color: #00ff7f;">0</text>
-				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 15px;">经验值</text>
+				<text style="display: inline-block; text-align: center; color: #00ff7f; font-size: 14px;">0</text>
+				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 12px;">经验值</text>
 			</view>
 			<view class="note">
-				<text style="display: inline-block; text-align: center; color: #00ff7f;">0</text>
-				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 15px;">经验值</text>
+				<text style="display: inline-block; text-align: center; color: #00ff7f; font-size: 14px;">0</text>
+				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 12px;">魅力值</text>
 			</view>
 			<view class="note">
-				<text style="display: inline-block; text-align: center; color: #00ff7f;">0</text>
-				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 15px;">经验值</text>
+				<text style="display: inline-block; text-align: center; color: #00ff7f; font-size: 14px;">0</text>
+				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 12px;">蓝豆</text>
 			</view>
 			<view class="note-right">
-				<text style="display: inline-block; text-align: center; color: #00ff7f;">0</text>
-				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 15px;">经验值</text>
+				<text style="display: inline-block; text-align: center; color: #00ff7f; font-size: 14px;">0</text>
+				<text style="display: inline-block; text-align: center; color: #8f8f8f; font-size: 12px;">心意</text>
 			</view>
 		</view>
 		<view class="prize">
@@ -47,102 +41,74 @@
 				<text style="font-size: 15px;">心意卡片</text>
 			</view>
 		</view>
-		<view class="list" style="margin-top: 15px; margin-bottom: 15px; border-bottom-style: ridge;">
-			<text style="margin-top: 8px;">我的勋章</text>
-			<text style="color: #999999; margin-left: 60px; margin-top: 8px; margin-right: 20px;">快来获取第一个勋章</text>
-			<view class="to">
-				<uni-icons type="arrowright" size="30"></uni-icons>
-			</view>
-		</view>
-		<view class="list">
-			<text style="margin-right:230px ; margin-top: 8px;">文件暂存区</text>
-			<view class="to">
-				<uni-icons type="arrowright" size="30"></uni-icons>
-			</view>
-		</view>
-		<view class="list">
-			<text style="margin-right:230px ; margin-top: 8px;">分享给朋友</text>
-			<view class="to">
-				<uni-icons type="arrowright" size="30"></uni-icons>
-			</view>
-		</view>
-		<view class="list">
-			<text style="margin-right:250px ; margin-top: 8px;">用户协议</text>
-			<view class="to">
-				<uni-icons type="arrowright" size="30"></uni-icons>
-			</view>
-		</view>
-		<view class="list">
-			<text style="margin-right:250px ; margin-top: 8px;">隐私政策</text>
-			<view class="to">
-				<uni-icons type="arrowright" size="30"></uni-icons>
-			</view>
-		</view>
-		<view class="list" style="border-bottom-style:ridge ;">
-			<text style="margin-right:285px ; margin-top: 8px;">设置</text>
-			<view class="to">
-				<uni-icons type="arrowright" size="30"></uni-icons>
-			</view>
-		</view>
+		<uni-list class="top">
+		    <uni-list-item title="我的勋章" rightText="快来获取第一个勋章"></uni-list-item>
+		</uni-list>
+		<uni-list>
+		    <uni-list-item title="文件暂存区" ></uni-list-item>
+			<uni-list-item title="分享给朋友" ></uni-list-item>
+			<uni-list-item title="用户协议" ></uni-list-item>
+			<uni-list-item title="隐私政策" ></uni-list-item>
+			<uni-list-item title="设置" ></uni-list-item>
+		</uni-list>
 	</view>
 </template>
-	
+
 <script>
-	import uniIcons from "@/components/uni-icons/uni-icons.vue"
+	import uniList from "@/components/uni-list/uni-list.vue"
+	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
 	export default {
-	    components: {uniIcons}
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		},
+		components: {uniList,uniListItem}
 	}
 </script>
 
 <style>
-	.list-all{
-		display: flex;
-		flex-direction: column;
+	.commom{
+		background-color: #f7f7f7;
+	}
+	.top{
+		margin-bottom: 40rpx;
 	}
 	.list-top{
 		display: flex;
 		// padding: 10px 15px 0 15px;
-		height: 55px;
-	}
-	.name{
-		width: 300px;
-		padding-left: 15px;
-		align-self: center;
-	}
-	.to{
-		align-self: center;
-		margin-right: 5px;
+		height: 90rpx;
+		margin-bottom: 50rpx;
+		background-color: #FFFFFF;
 	}
 	.note{
 		display: flex;
 		flex-direction: column;
 		width: 25%;
-		border-top-style: ridge;
+		/* border-top-style: ridge;
 		border-bottom-style: ridge;
-		border-right-style: ridge;
+		border-right-style: ridge; */
 	}
 	.note-right{
 		display: flex;
 		flex-direction: column;
 		width: 25%;
-		border-top-style: ridge;
-		border-bottom-style: ridge;
+		/* border-top-style: ridge;
+		border-bottom-style: ridge; */
 	}
 	.prize{
 		display: flex;
 		margin-top: 30px;
-		border-top-style: ridge;
-		border-bottom-style: ridge;
+		/* border-top-style: ridge;
+		border-bottom-style: ridge; */
+		margin-bottom: 50rpx;
+		background-color: #FFFFFF;
 	}
 	.ionlist{
 		width: 33.3%;
 		text-align: center;
-	}
-	.list{
-		display: flex;
-		height: 40px;
-		text-align: center;
-		padding-left: 15px;
-		border-top-style: ridge;
 	}
 </style>

@@ -1,46 +1,5 @@
 <template>
 	<view>
-		<view>未分组</view>
-		<view class="list-all">
-			<view class="list-top">
-				<view>
-					<image style="width: 50px; height: 50px; align-self: center;" src="../../static/logo.png"></image>
-				</view>
-				<view class="course">
-					任务1
-					<view class="name">已完成</view>
-				</view>
-				<view class="to">
-					<uni-icons type="arrowright" size="30"></uni-icons>
-				</view>
-				
-			</view>
-			<view class="list">
-				<view>
-					<image style="width: 50px; height: 50px; align-self: center;" src="../../static/logo.png"></image>
-				</view>
-				<view class="course">
-					任务2
-					<view class="name">已完成</view>
-				</view>
-				<view class="to">
-					<uni-icons type="arrowright" size="30"></uni-icons>
-				</view>
-			</view>
-			<view class="list">
-				<view>
-					<image style="width: 50px; height: 50px; align-self: center;" src="../../static/logo.png"></image>
-				</view>
-				<view class="course">
-					任务1
-					<view class="name">已完成</view>
-				</view>
-				<view class="to">
-					<uni-icons type="arrowright" size="30"></uni-icons>
-				</view>
-				
-			</view>
-		</view>
 		<view class="baseView" id="baseView">
 			<adTabbar>
 				<adTabbarItem text="资源" dataCur="resource" class="maxWidth" @click="navClick" :textColor="curPage=='resource'? '#4adede':'#9B9B9B'" :icon="'../../static/tabs/ziyuan' + [curPage=='resource'?'-active':''] + '.png'"></adTabbarItem>
@@ -50,10 +9,11 @@
 				<adTabbarItem text="详情" dataCur="detail" class="maxWidth" @click="navClick" :textColor="curPage=='detail'? '#4adede':'#9B9B9B'" :icon="'../../static/tabs/detail' + [curPage=='detail'?'-active':''] + '.png'"></adTabbarItem>
 			</adTabbar>
 			<!--把page放在Tabbar下面是因为page中要获取tabbar高度做bottom，需要让tabbar先渲染-->
-			<!-- <resource v-if="curPage=='resource'"></resource>
+			<resource v-if="curPage=='resource'"></resource>
 			<member v-if="curPage=='member'"></member>
 			<activity v-if="curPage=='activity'"></activity>
-			<message v-if="curPage=='message'"></message> -->
+			<message v-if="curPage=='message'"></message>
+			<detail v-if="curPage=='detail'"></detail>
 		</view>
 	</view>
 </template>

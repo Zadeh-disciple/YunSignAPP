@@ -3,6 +3,11 @@
 </template>
 
 <script>
+	export default {
+		name:"message",
+		// data() {
+		// }
+	}
 </script>
 
 <style>
