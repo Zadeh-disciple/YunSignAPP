@@ -1,5 +1,5 @@
-<template>
-	<view>用户协议</view>
+<template name="detail">
+	<view>detail</view>
 </template>
 
 <script>
