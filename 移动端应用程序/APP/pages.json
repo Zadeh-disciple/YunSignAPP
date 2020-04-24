@@ -1,6 +1,36 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path": "pages/login/login",
+		    "style" : {
+				"navigationBarTitleText": "登录"
+			}
+		},{
+		    "path" : "pages/login/register",
+		    "style" : {
+				"navigationBarTitleText": "注册"
+			}
+		},{
+		    "path" : "pages/login/userAgreement",
+		    "style" : {
+				"navigationBarTitleText": "用户协议"
+			}
+		},{
+		    "path" : "pages/login/logout",
+		    "style" : {
+				"navigationBarTitleText": "登出"
+			}
+		},{
+		    "path" : "pages/mpvue-gesture-lock/mpvue-gesture-lock",
+		    "style" : {
+				"navigationBarTitleText": "手势签到"
+			}
+		}
+		,{
+		    "path" : "pages/mpvue-gesture-lock/student_gesture",
+		    "style" : {}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "我加入的"
