@@ -1,4 +1,4 @@
-﻿package com.example.demo;
+package com.example.demo;
 
 import com.example.demo.controller.ItemsController;
 import org.springframework.boot.SpringApplication;
