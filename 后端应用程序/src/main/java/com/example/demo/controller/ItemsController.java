@@ -1,4 +1,4 @@
-﻿package com.example.demo.controller;
+package com.example.demo.controller;
 
 
 import com.example.demo.entity.Items;
@@ -37,7 +37,7 @@ public class ItemsController {
      * @return
      * 查询全部信息页面
      */
-    @RequestMapping("/login")
+    @RequestMapping("/index")
     public ModelAndView itemsListPage() {
         String sql = "select * from items";
         List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
