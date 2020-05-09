@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		sdfhjgak
 	</view>
 </template>
 
@@ -11,8 +11,13 @@
 				
 			}
 		},
+		onLoad() {
+			this.test()
+		},
 		methods: {
-			
+			test(){
+				console.log('what the ??')
+			}
 		}
 	}
 </script>
