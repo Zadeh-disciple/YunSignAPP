@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a1a54c5-cdb7-447b-812b-77d973deb006" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ItemsController.java" afterDir="false" />
-    </list>
+    <list default="true" id="5a1a54c5-cdb7-447b-812b-77d973deb006" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +11,19 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="LZJ" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1bTfGmUOaNzNSs1W62SyscWXmU1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588660923285</updated>
       <workItem from="1588660961834" duration="5420000" />
+      <workItem from="1588995886595" duration="1375000" />
     </task>
     <servers />
   </component>
@@ -98,5 +108,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="166" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588687099969" />
+    <state x="392" y="78" key="MultipleFileMergeDialog" timestamp="1589004459942">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="392" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1589004459942" />
+    <state x="445" y="75" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589004445326">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="75" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728" timestamp="1589004445326" />
   </component>
 </project>
