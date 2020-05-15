@@ -6,7 +6,7 @@ import './assets/css/global.css'
 
 import axios from 'axios'
 // 配置请求的根路径
-axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
+axios.defaults.baseURL = 'http://47.112.242.4:8181/'
 axios.interceptors.request.use(config => {
   // NProgress.start()
   console.log(config)

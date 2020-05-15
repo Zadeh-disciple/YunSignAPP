@@ -31,8 +31,8 @@
         <el-table-column type="index"></el-table-column>
         <el-table-column prop="username" label="姓名"></el-table-column>
         <el-table-column prop="email" label="邮箱"></el-table-column>
-        <el-table-column prop="mobile" label="电话"></el-table-column>
-        <el-table-column prop="role_name" label="角色"></el-table-column>
+        <el-table-column prop="telephone" label="电话"></el-table-column>
+        <el-table-column prop="role.rolename" label="角色"></el-table-column>
         <el-table-column label="状态">
           <template v-slot="scope">
             <el-switch
@@ -108,8 +108,8 @@
         <el-form-item label="邮箱" prop="email">
           <el-input v-model="addUserForm.email"></el-input>
         </el-form-item>
-        <el-form-item label="手机" prop="mobile">
-          <el-input v-model="addUserForm.mobile"></el-input>
+        <el-form-item label="手机" prop="telephone">
+          <el-input v-model="addUserForm.telephone"></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
@@ -138,8 +138,8 @@
         <el-form-item label="邮箱" prop="email">
           <el-input v-model="editUserForm.email"></el-input>
         </el-form-item>
-        <el-form-item label="手机" prop="mobile">
-          <el-input v-model="editUserForm.mobile"></el-input>
+        <el-form-item label="手机" prop="telephone">
+          <el-input v-model="editUserForm.telephone"></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
@@ -191,7 +191,7 @@ export default {
       cb(new Error('请输入合法的邮箱'))
     }
     // 自定义手机号校验规则
-    var checkMobile = (rule, value, cb) => {
+    var checkTelephone = (rule, value, cb) => {
       const regMobile = /^[1][3,4,5,7,8][0-9]{9}$/
       if (regMobile.test(value)) {
         return cb()
@@ -205,6 +205,12 @@ export default {
         pagesize: 2
       },
       userlist: [],
+      viruserlist: [
+        { userid: '101', username: 'cai', password: 'cai', email: 'cai@163.com', telephone: '13859697981', role: { roleid: 1, roledetail: 'superadmin', rolename: '超级管理员' } },
+        { userid: '102', username: 'wang', password: 'wang', email: 'wang@163.com', telephone: '13859697982', role: { roleid: 2, roledetail: 'teacher', rolename: '教师' } },
+        { userid: '103', username: 'du', password: 'du', email: 'du@163.com', telephone: '13858697983', role: { roleid: 3, roledetail: 'assitant', rolename: '助教' } },
+        { userid: '104', username: 'lin', password: 'lin', email: 'lin@163.com', telephone: '13859697984', role: { roleid: 4, roledetail: 'student', rolename: '学生' } }
+      ],
       total: 0,
       dialogVisible: false,
       editDialogVisible: false,
@@ -212,7 +218,7 @@ export default {
         username: '',
         password: '',
         email: '',
-        mobile: ''
+        telephone: ''
       },
       setRoleDialogVisible: false,
       addUserFormRules: {
@@ -240,9 +246,9 @@ export default {
           { required: true, message: '请输入邮箱', trigger: 'blur' },
           { validator: checkEmail, trigger: 'blur' }
         ],
-        mobile: [
+        telephone: [
           { required: true, message: '请输入手机', trigger: 'blur' },
-          { validator: checkMobile, trigger: 'blur' }
+          { validator: checkTelephone, trigger: 'blur' }
         ]
       },
       editUserForm: {},
@@ -251,9 +257,9 @@ export default {
           { required: true, message: '请输入邮箱', trigger: 'blur' },
           { validator: checkEmail, trigger: 'blur' }
         ],
-        mobile: [
+        telephone: [
           { required: true, message: '请输入手机', trigger: 'blur' },
-          { validator: checkMobile, trigger: 'blur' }
+          { validator: checkTelephone, trigger: 'blur' }
         ]
       },
       userInfo: '',
@@ -263,11 +269,12 @@ export default {
   },
   methods: {
     async getUserList () {
-      const { data } = await this.$http.get('users', {
+      const { data } = await this.$http.get('user/findAll', {
         params: this.queryInfo
       })
-      this.userlist = data.data.users
-      this.total = data.data.total
+      console.log(data)
+      this.userlist = data
+      this.total = data.length
     },
     handleSizeChange (newSize) {
       this.queryInfo.pagesize = newSize
@@ -316,7 +323,7 @@ export default {
         if (!valid) return
         const { data } = await this.$http.put(`users/${this.editUserForm.id}`, {
           email: this.editUserForm.email,
-          mobile: this.editUserForm.mobile
+          telephone: this.editUserForm.telephone
         })
         if (data.meta.status !== 200) {
           this.$message.error('修改用户信息失败！')

@@ -38,8 +38,8 @@
           </template>
         </el-table-column>
         <el-table-column type="index"></el-table-column>
-        <el-table-column prop="roleName" label="角色名称"></el-table-column>
-        <el-table-column prop="roleDesc" label="角色描述"></el-table-column>
+        <el-table-column prop="rolename" label="角色名称"></el-table-column>
+        <el-table-column prop="roledetail" label="角色描述"></el-table-column>
         <el-table-column label="操作" width="450px">
           <template v-slot="scope">
             <el-button type="primary" icon="el-icon-edit">编辑</el-button>
@@ -91,11 +91,12 @@ export default {
   },
   methods: {
     async getRoleList () {
-      const { data } = await this.$http.get('roles')
-      if (data.meta.status !== 200) {
-        return this.$message.error(data.meta.msg)
-      }
-      this.rolelist = data.data
+      const { data } = await this.$http.get('role/findAll')
+      // if (data.status !== 200) {
+      //   return this.$message.error(data.msg)
+      // }
+      console.log(data)
+      this.rolelist = data
     },
     removeRightById (role, rightId) {
       this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
