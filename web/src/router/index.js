@@ -11,6 +11,9 @@ import DataDictionary from '../components/setting/data_dictionary.vue'
 import User from '../components/user/user.vue'
 import Right from '../components/power/Rights'
 import Role from '../components/power/Roles'
+import Parameter from '../components/setting/parameter.vue'
+import School from '../components/school/school.vue'
+import Menu from '../components/menu/menu.vue'
 
 Vue.use(VueRouter)
 
@@ -24,9 +27,12 @@ const routes = [
     children: [
       { path: '/welcome', component: Welcome },
       { path: '/users', component: User },
-      { path: '/dataDictionary', component: DataDictionary },
+      { path: '/datadictionary', component: DataDictionary },
       { path: '/rights', component: Right },
-      { path: '/roles', component: Role }
+      { path: '/roles', component: Role },
+      { path: '/parameter', component: Parameter },
+      { path: '/schools', component: School },
+      { path: '/menu', component: Menu }
     ]
   },
   { path: '/404', component: Err404 },

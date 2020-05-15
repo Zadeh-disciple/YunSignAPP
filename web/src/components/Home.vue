@@ -45,11 +45,74 @@
 export default {
   data () {
     return {
-      menulist: [],
+      menulist: [
+        {
+          authName: '用户管理',
+          children: [{
+            authName: '用户列表',
+            id: 110,
+            path: 'users'
+          }],
+          id: 125,
+          path: 'users'
+        },
+        {
+          authName: '权限管理',
+          children: [{
+            authName: '角色列表',
+            id: 111,
+            path: 'roles'
+          },
+          {
+            authName: '权限列表',
+            id: 112,
+            path: 'rights'
+          }],
+          id: 103,
+          path: 'rights'
+        },
+        {
+          authName: '院校管理',
+          children: [{
+            authName: '院校列表',
+            id: 121,
+            path: 'schools'
+          }],
+          id: 120,
+          path: 'schools'
+        },
+        {
+          authName: '菜单管理',
+          children: [{
+            authName: '菜单列表',
+            id: 131,
+            path: 'menu'
+          }],
+          id: 130,
+          path: 'menu'
+        },
+        {
+          authName: '系统管理',
+          children: [{
+            authName: '数据字典',
+            id: 107,
+            path: 'datadictionary'
+          },
+          {
+            authName: '参数设置',
+            id: 108,
+            path: 'parameter'
+          }],
+          id: 102,
+          path: 'orders'
+        }
+      ],
       iconObj: {
         125: 'el-icon-user-solid',
         103: 'el-icon-box',
-        102: 'el-icon-s-tools'
+        102: 'el-icon-s-tools',
+        130: 'el-icon-s-unfold',
+        120: 'el-icon-school'
       },
       isCollapse: false
     }
@@ -59,38 +122,40 @@ export default {
       window.sessionStorage.clear()
       this.$router.push('/login')
     },
-    async getMenuList () {
-      const { data } = await this.$http.get('menus')
-      if (data.meta.status === 200) {
-        const list = []
-        for (let i = 0; i < data.data.length; i++) {
-          if (i <= 1) {
-            list[i] = data.data[i]
-            // console.log(data.data[i])
-          }
-          if (i === 3) {
-            data.data[i].authName = '系统管理'
-            data.data[i].children[0].authName = '数据字典'
-            data.data[i].children[0].path = 'dataDictionary'
-            list[i - 1] = data.data[i]
-          }
-        }
-        this.menulist = list
-        console.log(list)
-      } else {
-        this.$message({
-          type: 'error',
-          message: data.meta.msg
-        })
-      }
-    },
+    // async getMenuList () {
+    //   const { data } = await this.$http.get('menus')
+    //   if (data.meta.status === 200) {
+    //     const list = []
+    //     for (let i = 0; i < data.data.length; i++) {
+    //       if (i <= 1) {
+    //         list[i] = data.data[i]
+    //         // console.log(data.data[i])
+    //       }
+    //       if (i === 3) {
+    //         data.data[i].authName = '系统管理'
+    //         data.data[i].children[0].authName = '数据字典'
+    //         // data.data[i].children[1].authName = '参数设置'
+    //         data.data[i].children[0].path = 'dataDictionary'
+    //         // data.data[i].children[1].path = 'parameter'
+    //         list[i - 1] = data.data[i]
+    //       }
+    //     }
+    //     this.menulist = list
+    //     console.log(list)
+    //   } else {
+    //     this.$message({
+    //       type: 'error',
+    //       message: data.meta.msg
+    //     })
+    //   }
+    // },
     toggleCollapse () {
       this.isCollapse = !this.isCollapse
     }
-  },
-  created () {
-    this.getMenuList()
   }
+  // created () {
+  //   this.getMenuList()
+  // }
 }
 </script>
 
