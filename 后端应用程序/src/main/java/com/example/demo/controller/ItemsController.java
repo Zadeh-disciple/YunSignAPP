@@ -16,7 +16,7 @@ import java.util.Map;
 
 @ComponentScan
 @RestController
-//@RequestMapping("/items")
+@RequestMapping("/demo")
 //@RequestMapping("/User")
 public class ItemsController {
 
@@ -37,7 +37,7 @@ public class ItemsController {
      * @return
      * 查询全部信息页面
      */
-    @RequestMapping("/index")
+    @RequestMapping("/login")
     public ModelAndView itemsListPage() {
         String sql = "select * from items";
         List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);

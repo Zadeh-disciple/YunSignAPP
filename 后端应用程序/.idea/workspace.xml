@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a1a54c5-cdb7-447b-812b-77d973deb006" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../APP/pages/find/find.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../APP/pages/find/find.vue" afterDir="false" />
+    <list default="true" id="d74403bb-d624-4a5d-913d-2ca7d4561381" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ItemsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,14 +15,16 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="LZJ" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1bTfGmUOaNzNSs1W62SyscWXmU1" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zjou8ZI185cwKCbcI0QjwDjljk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="F:/111备份/YunSign/后端应用程序" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -54,13 +57,15 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5a1a54c5-cdb7-447b-812b-77d973deb006" name="Default Changelist" comment="" />
-      <created>1588660923285</created>
+      <changelist id="d74403bb-d624-4a5d-913d-2ca7d4561381" name="Default Changelist" comment="" />
+      <created>1585362103478</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588660923285</updated>
-      <workItem from="1588660961834" duration="5420000" />
-      <workItem from="1588995886595" duration="1103000" />
+      <updated>1585362103478</updated>
+      <workItem from="1585362152351" duration="320000" />
+      <workItem from="1586514382557" duration="5650000" />
+      <workItem from="1588661355391" duration="853000" />
+      <workItem from="1589005009382" duration="3346000" />
     </task>
     <servers />
   </component>
@@ -68,49 +73,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1588661350683">
+    <state width="1322" height="166" key="GridCell.Tab.0.bottom" timestamp="1589048502442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588661350683" />
-    <state width="1322" height="166" key="GridCell.Tab.0.bottom" timestamp="1588687099968">
+    <state width="1322" height="166" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589048502442" />
+    <state width="1322" height="166" key="GridCell.Tab.0.center" timestamp="1589048502441">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588687099968" />
-    <state width="1322" height="166" key="GridCell.Tab.0.center" timestamp="1588687099968">
+    <state width="1322" height="166" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589048502441" />
+    <state width="1322" height="166" key="GridCell.Tab.0.left" timestamp="1589048502441">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588687099968" />
-    <state width="1322" height="166" key="GridCell.Tab.0.left" timestamp="1588687099968">
+    <state width="1322" height="166" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589048502441" />
+    <state width="1322" height="166" key="GridCell.Tab.0.right" timestamp="1589048502441">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588687099968" />
-    <state width="1322" height="166" key="GridCell.Tab.0.right" timestamp="1588687099968">
+    <state width="1322" height="166" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589048502441" />
+    <state width="1322" height="166" key="GridCell.Tab.1.bottom" timestamp="1589048502443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588687099968" />
-    <state width="1322" height="166" key="GridCell.Tab.1.bottom" timestamp="1588687099970">
+    <state width="1322" height="166" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589048502443" />
+    <state width="1322" height="166" key="GridCell.Tab.1.center" timestamp="1589048502443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588687099970" />
-    <state width="1322" height="166" key="GridCell.Tab.1.center" timestamp="1588687099969">
+    <state width="1322" height="166" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589048502443" />
+    <state width="1322" height="166" key="GridCell.Tab.1.left" timestamp="1589048502442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588687099969" />
-    <state width="1322" height="166" key="GridCell.Tab.1.left" timestamp="1588687099969">
+    <state width="1322" height="166" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589048502442" />
+    <state width="1322" height="166" key="GridCell.Tab.1.right" timestamp="1589048502443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588687099969" />
-    <state width="1322" height="166" key="GridCell.Tab.1.right" timestamp="1588687099969">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588687099969" />
-    <state x="392" y="78" key="MultipleFileMergeDialog" timestamp="1589004459942">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="392" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1589004459942" />
-    <state x="445" y="75" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589004445326">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="445" y="75" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728" timestamp="1589004445326" />
+    <state width="1322" height="166" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589048502443" />
   </component>
 </project>
