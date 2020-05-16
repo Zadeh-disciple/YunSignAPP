@@ -8,13 +8,12 @@
     <el-card>
       <el-row :gutter="20">
         <el-col :span="4">
-          <!-- <el-button type="primary" @click="dialogVisible = true"
-            >添加数据</el-button> -->
-          <div style="border-left-style: solid; border-left: #0086B3;">菜单列表</div>
+          <el-button type="primary" @click="dialogVisible = true"
+            >添加数据</el-button>
         </el-col>
       </el-row>
       <el-tree
-        :data="data"
+        :data="menulist"
         :props="defaultProps"
         accordion
         @node-click="handleNodeClick"
@@ -28,39 +27,40 @@
 export default {
   data () {
     return {
-      data: [{
-        label: '用户管理',
-        children: [{
-          label: '用户列表'
-        }]
-      }, {
-        label: '权限管理',
-        children: [{
-          label: '角色列表'
-        }, {
-          label: '权限列表'
-        }]
-      }, {
-        label: '院校管理',
-        children: [{
-          label: '院校列表'
-        }]
-      },
-      {
-        label: '菜单管理',
-        children: [{
-          label: '菜单列表'
-        }]
-      },
-      {
-        label: '系统管理',
-        children: [{
-          label: '数据字典'
-        },
-        {
-          label: '参数设置'
-        }]
-      }],
+      // data: [{
+      //   label: '用户管理',
+      //   children: [{
+      //     label: '用户列表'
+      //   }]
+      // }, {
+      //   label: '权限管理',
+      //   children: [{
+      //     label: '角色列表'
+      //   }, {
+      //     label: '权限列表'
+      //   }]
+      // }, {
+      //   label: '院校管理',
+      //   children: [{
+      //     label: '院校列表'
+      //   }]
+      // },
+      // {
+      //   label: '菜单管理',
+      //   children: [{
+      //     label: '菜单列表'
+      //   }]
+      // },
+      // {
+      //   label: '系统管理',
+      //   children: [{
+      //     label: '数据字典'
+      //   },
+      //   {
+      //     label: '参数设置'
+      //   }]
+      // }],
+      menulist: [],
       addSchoolForm: {
 
       },
@@ -73,7 +73,31 @@ export default {
   methods: {
     handleNodeClick (data) {
       console.log(data)
+    },
+    async getMenuList () {
+      const { data } = await this.$http.get('menu/findAll')
+      // if (data.status !== 200) {
+      //   return this.$message.error(data.msg)
+      // }
+      console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        const menuexample = {
+          label: '',
+          children: [{
+            label: ''
+          }]
+        }
+        menuexample.label = data[i].menuname
+        menuexample.children[0].label = data[i].menulevel1
+        this.menulist.push(menuexample)
+        console.log(menuexample)
+      }
+      console.log(this.menulist)
+      // this.schoollist = data
     }
+  },
+  created () {
+    this.getMenuList()
   }
 }
 </script>

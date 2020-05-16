@@ -47,15 +47,15 @@
             <el-button
               type="primary"
               icon="el-icon-edit"
-              @click="showEditDialog(scope.row.id)"
               size="mini"
+              @click="showEditDialog(scope.row)"
             ></el-button>
             <!-- 删除用户 -->
             <el-button
               type="danger"
-              @click="deleteUser(scope.row.id)"
               icon="el-icon-delete"
               size="mini"
+              @click="deleteUser(scope.row)"
             ></el-button>
             <!-- 分配角色 -->
             <el-tooltip
@@ -162,9 +162,9 @@
           <el-select v-model="selectRoleId" placeholder="请选择新角色">
             <el-option
               v-for="item in rolesList"
-              :key="item.id"
-              :label="item.roleName"
-              :value="item.id">
+              :key="item.roleid"
+              :label="item.rolename"
+              :value="item.roleid">
             </el-option>
           </el-select>
         </p>
@@ -298,8 +298,18 @@ export default {
     addUser () {
       this.$refs.addUserFormRef.validate(async valid => {
         if (!valid) return
-        const { data } = await this.$http.post('users', this.addUserForm)
-        if (data.meta.status !== 201) {
+        const newuser = {
+          username: this.addUserForm.username,
+          password: this.addUserForm.password,
+          email: this.addUserForm.email,
+          telephone: this.addUserForm.telephone,
+          role: {
+            roleid: 1,
+            rolename: ''
+          }
+        }
+        const { data } = await this.$http.post('user/addUser', newuser)
+        if (data.status !== 201) {
           this.$message.error('添加用户失败！')
         }
         this.$message.success('添加用户成功！')
@@ -308,11 +318,12 @@ export default {
       })
     },
     async showEditDialog (id) {
-      const { data } = await this.$http.get(`users/${id}`)
-      if (data.meta.status !== 200) {
-        this.$message.error('查询用户失败！')
-      }
-      this.editUserForm = data.data
+      // const { data } = await this.$http.get(`users/${id}`)
+      // if (data.meta.status !== 200) {
+      //   this.$message.error('查询用户失败！')
+      // }
+      console.log(id)
+      this.editUserForm = id
       this.editDialogVisible = true
     },
     editDialogClosed () {
@@ -321,11 +332,8 @@ export default {
     editUser () {
       this.$refs.editUserFormRef.validate(async valid => {
         if (!valid) return
-        const { data } = await this.$http.put(`users/${this.editUserForm.id}`, {
-          email: this.editUserForm.email,
-          telephone: this.editUserForm.telephone
-        })
-        if (data.meta.status !== 200) {
+        const { data } = await this.$http.post('user/updateUser', this.editUserForm)
+        if (data.status !== 200) {
           this.$message.error('修改用户信息失败！')
         }
         this.$message.success('修改成功！')
@@ -333,50 +341,58 @@ export default {
         this.getUserList()
       })
     },
-    deleteUser (id) {
-      this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
+    async deleteUser (id) {
+      // this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
+      //   confirmButtonText: '确定',
+      //   cancelButtonText: '取消',
+      //   type: 'warning'
+      // })
+      // async () => {
+      const { data } = await this.$http.post(`user/deleteUser?userid=${id.userid}`)
+      // if (data.status !== 200) {
+      //   this.$message.error(data.msg)
+      // } else {
+      console.log(data)
+      this.$message({
+        type: 'success',
+        message: '删除成功!'
       })
-        .then(async () => {
-          const { data } = await this.$http.delete(`users/${id}`)
-          if (data.meta.status !== 200) {
-            this.$message.error(data.meta.msg)
-          } else {
-            this.$message({
-              type: 'success',
-              message: '删除成功!'
-            })
-            this.getUserList()
-          }
-        })
-        .catch(() => {
-          this.$message({
-            type: 'info',
-            message: '已取消删除'
-          })
-        })
+      this.getUserList()
+      // }
+      // }
+      // .catch(() => {
+      //   this.$message({
+      //     type: 'info',
+      //     message: '已取消删除'
+      //   })
+      // })
     },
     async setRole (userInfo) {
-      const { data } = await this.$http.get('roles')
-      if (data.meta.status !== 200) {
-        return this.$message.error(data.meta.msg)
-      }
-      this.rolesList = data.data
+      const { data } = await this.$http.get('role/findAll')
+      // if (data.status !== 200) {
+      //   return this.$message.error(data.msg)
+      // }
+      // const list1 = []
+      // for (let i = 0; i < data.length; i++) {
+      //   list1[i] = data[i].rolename
+      // }
+      // console.log(userInfo)
+      this.rolesList = data
       this.userInfo = userInfo
+      console.log(this.userInfo)
       this.setRoleDialogVisible = true
     },
     async saveRoleInfo () {
       if (!this.selectRoleId) {
         return this.$message.error('请选择要分配的角色！')
       }
-      const { data } = await this.$http.put(`users/${this.userInfo.id}/role`, {
-        rid: this.selectRoleId
-      })
-      if (data.meta.status !== 200) {
-        return this.$message.error(data.meta.msg)
-      }
+      console.log(this.selectRoleId)
+      this.userInfo.role.roleid = this.selectRoleId
+      const { data } = await this.$http.post('user/updateUser', this.userInfo)
+      // if (data.status !== 200) {
+      //   return this.$message.error(data.msg)
+      // }
+      console.log(data)
       this.$message.success('分配角色成功！')
       this.getUserList()
       this.setRoleDialogVisible = false

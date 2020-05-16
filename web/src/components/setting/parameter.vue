@@ -26,7 +26,7 @@
               icon="el-icon-edit"
               @click="showEditDialog(scope.row)"
               size="mini"
-            ></el-button>
+            >编辑</el-button>
           </template>
         </el-table-column>
       </el-table>

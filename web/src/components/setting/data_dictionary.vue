@@ -49,8 +49,7 @@
               icon="el-icon-edit"
               @click="showEditDialog(scope.row)"
               size="mini"
-              style="width: 25px;"
-            ></el-button>
+            >编辑</el-button>
             <!-- 删除用户 -->
             <el-button
               type="danger"
@@ -59,7 +58,7 @@
 el-icon-folder-opened
 "
               size="mini"
-            ></el-button>
+            >详情</el-button>
             <!-- 分配角色 -->
             <!-- <el-tooltip
               :enterable="false"
