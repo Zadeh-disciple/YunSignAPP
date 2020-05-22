@@ -26,6 +26,12 @@
 				"navigationBarTitleText":"发现"
 			}
         }
+		,{
+		    "path" : "pages/login/login",
+		    "style" : {
+				"navigationBarTitleText":"登录"
+			}
+		}
         ,{
             "path" : "pages/my/my",
             "style" : {

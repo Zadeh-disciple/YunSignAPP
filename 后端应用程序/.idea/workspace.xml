@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d74403bb-d624-4a5d-913d-2ca7d4561381" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ItemsController.java" afterDir="false" />
-    </list>
+    <list default="true" id="c464838a-621e-4aa7-a295-b17bf5e51c96" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -24,8 +24,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1Zjou8ZI185cwKCbcI0QjwDjljk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1by5qbMre7vBscOWC50MjP82dLr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,74 +38,332 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589534508658" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/工程训练/Wesign_后端代码/wesign" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.fzucai.yunsign.repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fzucai.yunsign.controller" />
+      <recent name="com.fzucai.yunsign.repository" />
+      <recent name="com.fzucai.yunsign.entity" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\YunSignAPP\yunsign\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.YunsignApplication">
+    <configuration name="RoleRepositoryTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yunsign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fzucai.yunsign.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fzucai.yunsign.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.RoleRepositoryTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserRepositoryTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yunsign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fzucai.yunsign.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fzucai.yunsign.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.findByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yunsign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fzucai.yunsign.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fzucai.yunsign.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="findByUsername(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.findByUsernameAndPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yunsign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fzucai.yunsign.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fzucai.yunsign.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="findByUsernameAndPassword(java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.findUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yunsign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fzucai.yunsign.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fzucai.yunsign.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="findUser(java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="YunsignApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="yunsign" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fzucai.yunsign.YunsignApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.UserRepositoryTest.findAll" />
+      <item itemvalue="JUnit.UserRepositoryTest.findByUsernameAndPassword" />
+      <item itemvalue="JUnit.UserRepositoryTest.findByUsername" />
+      <item itemvalue="JUnit.UserRepositoryTest.findUser" />
+      <item itemvalue="JUnit.RoleRepositoryTest.findAll" />
+      <item itemvalue="Spring Boot.YunsignApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RoleRepositoryTest.findAll" />
+        <item itemvalue="JUnit.UserRepositoryTest.findAll" />
+        <item itemvalue="JUnit.UserRepositoryTest.findUser" />
+        <item itemvalue="JUnit.UserRepositoryTest.findByUsernameAndPassword" />
+        <item itemvalue="JUnit.UserRepositoryTest.findByUsername" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d74403bb-d624-4a5d-913d-2ca7d4561381" name="Default Changelist" comment="" />
-      <created>1585362103478</created>
+      <changelist id="c464838a-621e-4aa7-a295-b17bf5e51c96" name="Default Changelist" comment="" />
+      <created>1586443347219</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585362103478</updated>
-      <workItem from="1585362152351" duration="320000" />
-      <workItem from="1586514382557" duration="5650000" />
-      <workItem from="1588661355391" duration="853000" />
-      <workItem from="1589005009382" duration="3346000" />
+      <updated>1586443347219</updated>
+      <workItem from="1586443353526" duration="651000" />
+      <workItem from="1586444074981" duration="5060000" />
+      <workItem from="1586489380282" duration="1829000" />
+      <workItem from="1586510317582" duration="11931000" />
+      <workItem from="1587737983948" duration="559000" />
+      <workItem from="1588814989296" duration="1225000" />
+      <workItem from="1589469781213" duration="727000" />
+      <workItem from="1589471021557" duration="11971000" />
+      <workItem from="1589591785159" duration="8116000" />
+      <workItem from="1590134005749" duration="9317000" />
     </task>
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 13h 54m 28s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 02m 02s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 03m 13s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 20m 36s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 30m 52s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 34m 09s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 42m 17s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 44m 14s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserRepositoryTest_findAll - 2020.05.15 at 14h 46m 22s.xml">
+      <configuration name="UserRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoleRepositoryTest_findAll - 2020.05.15 at 15h 01m 55s.xml">
+      <configuration name="RoleRepositoryTest.findAll" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="166" key="GridCell.Tab.0.bottom" timestamp="1589048502442">
+    <state width="1322" height="197" key="GridCell.Tab.0.bottom" timestamp="1590141327613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589048502442" />
-    <state width="1322" height="166" key="GridCell.Tab.0.center" timestamp="1589048502441">
+    <state width="1322" height="197" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
+    <state width="1322" height="197" key="GridCell.Tab.0.center" timestamp="1590141327612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589048502441" />
-    <state width="1322" height="166" key="GridCell.Tab.0.left" timestamp="1589048502441">
+    <state width="1322" height="197" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590141327612" />
+    <state width="1322" height="197" key="GridCell.Tab.0.left" timestamp="1590141327612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589048502441" />
-    <state width="1322" height="166" key="GridCell.Tab.0.right" timestamp="1589048502441">
+    <state width="1322" height="197" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590141327612" />
+    <state width="1322" height="197" key="GridCell.Tab.0.right" timestamp="1590141327613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589048502441" />
-    <state width="1322" height="166" key="GridCell.Tab.1.bottom" timestamp="1589048502443">
+    <state width="1322" height="197" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
+    <state width="1322" height="197" key="GridCell.Tab.1.bottom" timestamp="1590141327614">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589048502443" />
-    <state width="1322" height="166" key="GridCell.Tab.1.center" timestamp="1589048502443">
+    <state width="1322" height="197" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590141327614" />
+    <state width="1322" height="197" key="GridCell.Tab.1.center" timestamp="1590141327613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589048502443" />
-    <state width="1322" height="166" key="GridCell.Tab.1.left" timestamp="1589048502442">
+    <state width="1322" height="197" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
+    <state width="1322" height="197" key="GridCell.Tab.1.left" timestamp="1590141327613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589048502442" />
-    <state width="1322" height="166" key="GridCell.Tab.1.right" timestamp="1589048502443">
+    <state width="1322" height="197" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
+    <state width="1322" height="197" key="GridCell.Tab.1.right" timestamp="1590141327613">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="166" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589048502443" />
+    <state width="1322" height="197" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fzucai/yunsign/repository/UserRepositoryTest.java</url>
+          <line>18</line>
+          <properties class="com.fzucai.yunsign.repository.UserRepositoryTest" method="findAll">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>yunsign</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

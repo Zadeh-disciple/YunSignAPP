@@ -50,6 +50,7 @@
 			<uni-list-item title="用户协议" ></uni-list-item>
 			<uni-list-item title="隐私政策" ></uni-list-item>
 			<uni-list-item title="设置" ></uni-list-item>
+			<uni-list-item title="注销" ></uni-list-item>
 		</uni-list>
 	</view>
 </template>

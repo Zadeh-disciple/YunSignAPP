@@ -1,10 +1,7 @@
 <template>
 	<view>
-		杜宏庆20200514测试
-		<!-- <view class="text-box"> -->
-		<text>{{testData}}</text>
-		<text>{{testData.length}}</text>
-		<!-- </view> -->
+		find
+		<text>{{userList}}</text>
 	</view>
 </template>
 
@@ -12,30 +9,25 @@
 	export default {
 		data() {
 			return {
-				testData: []
+				userList:[]
 			}
 		},
-		 // dataType: 'jsonp',  
-		 // crossDomain: true,
 		onLoad() {
-			this.getTestData()
+			this.getUserList()
 		},
 		methods: {
-			// 获取测试数据
-			getTestData(){
-				console.log('获取测试数据')
+			getUserList(){
+				console.log('获取user数据')
 				uni.request({
-					url: 'http://localhost:8080/demo/list',
+					url:'http://47.112.242.4:8181/user/findAll',
 					success:res=>{
 						console.log(res)
-						// if(res.data.status !== 0){
 						if(res.data.length == 0){
 							return uni.showToast({
-								title: '获取数据失败'
+								title:'无数据'
 							})
 						}
-						this.testData = res.data
-						console.log(this.testData)
+						this.userList = res.data
 					}
 				})
 			}
