@@ -5,19 +5,28 @@
         <img src="../assets/logo.png" alt="">
       </div>
       <!-- 表单 -->
-      <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="0px" class="login_form">
+      <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="0px" size="small" class="login_form">
         <el-form-item prop="username">
           <el-input placeholder="请输入账号" v-model="loginForm.username" prefix-icon="el-icon-user"></el-input>
         </el-form-item>
         <el-form-item prop="password">
           <el-input placeholder="请输入密码" v-model="loginForm.password" prefix-icon="el-icon-lock" type="password"></el-input>
         </el-form-item>
-        <el-form-item class="btns" >
-          <router-link class="link" to="/forgetpwd">
-              忘记密码
-          </router-link>
-          <el-button type="primary" @click="login">登录</el-button>
-          <el-button type="info" @click="resetLoginForm">重置</el-button>
+        <el-form-item >
+          <el-checkbox v-model="keeplogin">30天免登陆</el-checkbox>
+        </el-form-item>
+        <el-form-item>
+          <div class="btns" >
+            <div>
+              <el-button type="primary" @click="login">登录</el-button>
+              <el-button type="info" @click="resetLoginForm">重置</el-button>
+            </div>
+            <div style="margin-left: 5%;">
+              <router-link class="link" to="/forgetpwd">
+                  忘记密码
+              </router-link>
+            </div>
+          </div>
         </el-form-item>
       </el-form>
     </div>
@@ -33,6 +42,7 @@ export default {
         username: 'admin',
         password: '123456'
       },
+      keeplogin: false,
       // 登录规则
       loginFormRules: {
         username: [
@@ -101,17 +111,19 @@ export default {
 .login_form{
   position: absolute;
   bottom: 0;
+  // margin-top: 30px;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .btns{
   display: flex;
-  justify-content:flex-end;
+  flex-direction: row;
+  justify-content:center;
 }
 
 .link{
-  padding-right: 190px;
+  padding-right: 19px;
 }
 </style>
