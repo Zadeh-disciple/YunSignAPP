@@ -7,15 +7,51 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yunsign" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yunsign" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yunsign" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="yun: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -27,23 +63,29 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectId" id="1by5qbMre7vBscOWC50MjP82dLr" />
+  <component name="ProjectId" id="1cOMhKlPQZLU6oAg1GZmNXWfYWR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589534508658" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590850999797" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/工程训练/Wesign_后端代码/wesign" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -55,15 +97,23 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.fzucai.yunsign.repository" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.fzucai.yunsign.controller" />
-      <recent name="com.fzucai.yunsign.repository" />
-      <recent name="com.fzucai.yunsign.entity" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\EngineeringPractice\YunSign\src\main\resources\com\fzucai\yunsign\mapper" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fzucai.yunsign.entity" />
+      <recent name="com.fzucai.yunsign.service" />
+      <recent name="com.fzucai.yunsign.repository" />
+      <recent name="com.fzucai.yunsign.controller" />
+      <recent name="com.fzucai.yunsign.mapper" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\EngineeringPractice\YunSign\src\main\java\com\fzucai\yunsign\mapper" />
+      <recent name="E:\EngineeringPractice\YunSign\src\main\resources" />
+      <recent name="E:\EngineeringPractice\YunSign\src\main\java\com\fzucai\yunsign" />
       <recent name="G:\YunSignAPP\yunsign\src\main\resources" />
     </key>
   </component>
@@ -80,6 +130,8 @@
       <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.RoleRepositoryTest" />
       <option name="METHOD_NAME" value="findAll" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,6 +148,8 @@
       <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
       <option name="METHOD_NAME" value="findAll" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,6 +166,8 @@
       <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
       <option name="METHOD_NAME" value="findByUsername(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,6 +184,8 @@
       <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
       <option name="METHOD_NAME" value="findByUsernameAndPassword(java.lang.String,java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,6 +202,8 @@
       <option name="MAIN_CLASS_NAME" value="com.fzucai.yunsign.repository.UserRepositoryTest" />
       <option name="METHOD_NAME" value="findUser(java.lang.String,java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,20 +216,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserRepositoryTest.findAll" />
       <item itemvalue="JUnit.UserRepositoryTest.findByUsernameAndPassword" />
-      <item itemvalue="JUnit.UserRepositoryTest.findByUsername" />
       <item itemvalue="JUnit.UserRepositoryTest.findUser" />
+      <item itemvalue="JUnit.UserRepositoryTest.findAll" />
+      <item itemvalue="JUnit.UserRepositoryTest.findByUsername" />
       <item itemvalue="JUnit.RoleRepositoryTest.findAll" />
       <item itemvalue="Spring Boot.YunsignApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RoleRepositoryTest.findAll" />
+        <item itemvalue="JUnit.UserRepositoryTest.findByUsername" />
         <item itemvalue="JUnit.UserRepositoryTest.findAll" />
         <item itemvalue="JUnit.UserRepositoryTest.findUser" />
         <item itemvalue="JUnit.UserRepositoryTest.findByUsernameAndPassword" />
-        <item itemvalue="JUnit.UserRepositoryTest.findByUsername" />
       </list>
     </recent_temporary>
   </component>
@@ -190,9 +250,18 @@
       <workItem from="1587737983948" duration="559000" />
       <workItem from="1588814989296" duration="1225000" />
       <workItem from="1589469781213" duration="727000" />
-      <workItem from="1589471021557" duration="11971000" />
-      <workItem from="1589591785159" duration="8116000" />
-      <workItem from="1590134005749" duration="9317000" />
+      <workItem from="1589471021557" duration="12992000" />
+      <workItem from="1589558052459" duration="13022000" />
+      <workItem from="1590395404345" duration="7580000" />
+      <workItem from="1590493098413" duration="10229000" />
+      <workItem from="1590583660199" duration="4565000" />
+      <workItem from="1590747828391" duration="10374000" />
+      <workItem from="1590807009482" duration="16359000" />
+      <workItem from="1590827258594" duration="18056000" />
+      <workItem from="1590999699726" duration="686000" />
+      <workItem from="1591000456280" duration="13935000" />
+      <workItem from="1591098013885" duration="16819000" />
+      <workItem from="1591515213214" duration="7340000" />
     </task>
     <servers />
   </component>
@@ -232,38 +301,66 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="197" key="GridCell.Tab.0.bottom" timestamp="1590141327613">
+    <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590748890313">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
-    <state width="1322" height="197" key="GridCell.Tab.0.center" timestamp="1590141327612">
+    <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1590748890313" />
+    <state x="462" y="221" width="441" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591016335039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590141327612" />
-    <state width="1322" height="197" key="GridCell.Tab.0.left" timestamp="1590141327612">
+    <state x="462" y="221" width="441" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1591016335039" />
+    <state width="1322" height="153" key="GridCell.Tab.0.bottom" timestamp="1591522704555">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590141327612" />
-    <state width="1322" height="197" key="GridCell.Tab.0.right" timestamp="1590141327613">
+    <state width="1322" height="153" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591522704555" />
+    <state width="1322" height="153" key="GridCell.Tab.0.center" timestamp="1591522704555">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
-    <state width="1322" height="197" key="GridCell.Tab.1.bottom" timestamp="1590141327614">
+    <state width="1322" height="153" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591522704555" />
+    <state width="1322" height="153" key="GridCell.Tab.0.left" timestamp="1591522704555">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590141327614" />
-    <state width="1322" height="197" key="GridCell.Tab.1.center" timestamp="1590141327613">
+    <state width="1322" height="153" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591522704555" />
+    <state width="1322" height="153" key="GridCell.Tab.0.right" timestamp="1591522704555">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
-    <state width="1322" height="197" key="GridCell.Tab.1.left" timestamp="1590141327613">
+    <state width="1322" height="153" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591522704555" />
+    <state width="1322" height="153" key="GridCell.Tab.1.bottom" timestamp="1591522704508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
-    <state width="1322" height="197" key="GridCell.Tab.1.right" timestamp="1590141327613">
+    <state width="1322" height="153" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591522704508" />
+    <state width="1322" height="153" key="GridCell.Tab.1.center" timestamp="1591522704508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="197" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590141327613" />
+    <state width="1322" height="153" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591522704508" />
+    <state width="1322" height="153" key="GridCell.Tab.1.left" timestamp="1591522704508">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="153" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591522704508" />
+    <state width="1322" height="153" key="GridCell.Tab.1.right" timestamp="1591522704508">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="153" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591522704508" />
+    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1590748906349">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1590748906349" />
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1591109940351">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1591109940351" />
+    <state x="290" y="60" width="786" height="608" key="find.popup" timestamp="1591014912410">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="290" y="60" width="786" height="608" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1591014912410" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1590503794424">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1590503794424" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591107205111">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591107205111" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

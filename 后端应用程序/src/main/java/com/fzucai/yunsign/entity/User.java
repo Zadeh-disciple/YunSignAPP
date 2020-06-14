@@ -10,12 +10,17 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public  String userid;
-    public  String  username;
+    public  Integer userid;
+//    public  String userid;
+    public  String username;
     public  String password;
+    public  String realname;
     public  String email;
     public  String telephone;
     @OneToOne
     @JoinColumn(name="roleid", referencedColumnName = "roleid")
     public Role role;
+    @OneToOne
+    @JoinColumn(name="schoolid", referencedColumnName = "schoolid")
+    public School school;
 }

@@ -1,5 +1,6 @@
 package com.fzucai.yunsign.entity;
 
+
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -9,10 +10,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class UserLogin {
+public class Menu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public  String username;
-    public  String password;
-
+    public Integer menuid;
+    public String menuname;
+    public String menulevel1;
 }
