@@ -1,7 +1,7 @@
 <template>
 	<view style="padding-top: 40upx;">
 		<view class="inputArea">
-			<input v-model="loginPhone" placeholder="请输入手机号/学工号" type="number" maxlength="11" class="inputClass" />
+			<input v-model="loginPhone" placeholder="请输入手机号/学工号" type="text" maxlength="11" class="inputClass" />
 		</view>
 		<view class="inputArea">
 			<input v-model="loginPassword" placeholder="请输入登录密码" type="password" class="inputClass" />
@@ -33,13 +33,40 @@
 				});
 			},
 			goLogin() {
-				wx.switchTab({
-					url: "../index/index"
-					// success: res => {},
-					// fail: () => {},
-					// complete: () => {}
-				});
-				this.$message.success('登录成功！！')
+				const userLogin = {
+				  username: this.loginPhone,
+				  password: this.loginPassword
+				}
+				console.log(userLogin)
+				uni.request({
+					url:'http://localhost:8181/api/login',
+					method:'POST',
+				    data: {
+						userLogin
+					},
+					success:(res)=>{
+						console.log(res)
+						// console.log(data)
+						// if(res.data.length == 0){
+						// 	return uni.showToast({
+						// 		title:'无数据'
+						// 	})
+						// }
+						// this.userList = res.data
+					}
+				})
+				// if (data.status !== 'success') return this.$message.error('登录失败！用户名或密码错误')
+				// this.$message.success('登录成功！')
+				// window.sessionStorage.setItem('token', data.token)
+				// console.log(data.token)
+				// this.$router.push('/home')
+				// wx.switchTab({
+				// 	url: "../index/index"
+				// 	// success: res => {},
+				// 	// fail: () => {},
+				// 	// complete: () => {}
+				// });
+				// this.$message.success('登录成功！！！')
 			}
 		}
 	}

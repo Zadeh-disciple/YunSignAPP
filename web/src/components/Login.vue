@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import md5 from 'js-md5'
+// import md5 from 'js-md5'
 export default {
   data () {
     return {
@@ -67,15 +67,14 @@ export default {
         console.log(this.loginForm)
         const userLogin = {
           username: this.loginForm.username,
-          // 用MD5加密用户密码
-          // password: md5(this.loginForm.password)
           password: this.loginForm.password
         }
+        console.log(this.userLogin)
         if (!valid) return
-        const { data } = await this.$http.post('user/login', userLogin)
+        const { data } = await this.$http.post('api/login', userLogin)
         console.log(data)
-        console.log(md5(userLogin.password))
-        if (data !== 'success') return this.$message.error('登录失败！用户名或密码错误')
+        // console.log(data.meta.status)
+        if (data.status !== 'success') return this.$message.error('登录失败！用户名或密码错误')
         this.$message.success('登录成功！')
         window.sessionStorage.setItem('token', data.token)
         console.log(data.token)

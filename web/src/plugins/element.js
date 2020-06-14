@@ -27,7 +27,8 @@ import {
   Tooltip,
   Switch,
   Tag,
-  Tree
+  Tree,
+  Checkbox
 } from 'element-ui'
 
 Vue.use(Button)
@@ -57,4 +58,5 @@ Vue.use(Tooltip)
 Vue.use(Switch)
 Vue.use(Tag)
 Vue.use(Tree)
+Vue.use(Checkbox)
 Vue.prototype.$message = Message
