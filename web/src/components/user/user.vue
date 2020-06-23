@@ -9,7 +9,7 @@
       <el-row :gutter="20">
         <el-col :span="7">
           <el-input
-            placeholder="请输入内容"
+            placeholder="请输入用户名"
             clearable
             @clear="getUserList"
             v-model="queryInfo.query"
@@ -17,7 +17,7 @@
             <el-button
               slot="append"
               icon="el-icon-search"
-              @click="getUserList"
+              @click="searchUser"
             ></el-button>
           </el-input>
         </el-col>
@@ -33,14 +33,6 @@
         <el-table-column prop="email" label="邮箱"></el-table-column>
         <el-table-column prop="telephone" label="电话"></el-table-column>
         <el-table-column prop="role.rolename" label="角色"></el-table-column>
-        <el-table-column label="状态">
-          <template v-slot="scope">
-            <el-switch
-              v-model="scope.row.mg_state"
-              @change="userStateChanged(scope.row)"
-            ></el-switch>
-          </template>
-        </el-table-column>
         <el-table-column label="操作">
           <!-- 编辑用户 -->
           <template v-slot="scope">
@@ -157,7 +149,7 @@
     >
       <div>
         <p>当前的用户:{{ userInfo.username }}</p>
-        <p>当前的角色:{{ userInfo.role_name }}</p>
+        <p>当前的角色:{{ role }}</p>
         <p>分配新角色:
           <el-select v-model="selectRoleId" placeholder="请选择新角色">
             <el-option
@@ -218,7 +210,11 @@ export default {
         username: '',
         password: '',
         email: '',
-        telephone: ''
+        telephone: '',
+        role: {
+          roleid: 1,
+          rolename: ''
+        }
       },
       setRoleDialogVisible: false,
       addUserFormRules: {
@@ -264,7 +260,8 @@ export default {
       },
       userInfo: '',
       rolesList: [],
-      selectRoleId: ''
+      selectRoleId: '',
+      role: ''
     }
   },
   methods: {
@@ -275,6 +272,17 @@ export default {
       console.log(data)
       this.userlist = data
       this.total = data.length
+    },
+    searchUser () {
+      const newuserlist = []
+      const list = this.userlist
+      for (let i = 0; i < list.length; i++) {
+        if (list[i].username === this.queryInfo.query) {
+          newuserlist.push(list[i])
+        }
+      }
+      this.userlist = newuserlist
+      this.total = newuserlist.length
     },
     handleSizeChange (newSize) {
       this.queryInfo.pagesize = newSize
@@ -379,6 +387,7 @@ export default {
       // console.log(userInfo)
       this.rolesList = data
       this.userInfo = userInfo
+      this.role = userInfo.role.rolename
       console.log(this.userInfo)
       this.setRoleDialogVisible = true
     },
@@ -403,6 +412,8 @@ export default {
     }
   },
   created () {
+    const data = this.$http.get('api/parsejwt')
+    console.log(data)
     this.getUserList()
   }
 }

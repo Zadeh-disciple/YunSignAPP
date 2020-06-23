@@ -97,6 +97,8 @@ export default {
     }
   },
   created () {
+    const data = this.$http.get('api/parsejwt')
+    console.log(data)
     this.getMenuList()
   }
 }

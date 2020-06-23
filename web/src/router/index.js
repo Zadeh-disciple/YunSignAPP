@@ -14,6 +14,7 @@ import Role from '../components/power/Roles'
 import Parameter from '../components/setting/parameter.vue'
 import School from '../components/school/school.vue'
 import Menu from '../components/menu/menu.vue'
+import Course from '../components/school/course.vue'
 
 Vue.use(VueRouter)
 
@@ -32,7 +33,8 @@ const routes = [
       { path: '/roles', component: Role },
       { path: '/parameter', component: Parameter },
       { path: '/schools', component: School },
-      { path: '/menu', component: Menu }
+      { path: '/menu', component: Menu },
+      { path: '/course', component: Course }
     ]
   },
   { path: '/404', component: Err404 },
@@ -46,14 +48,14 @@ const router = new VueRouter({
   routes
 })
 
-// router.beforeEach((to, from, next) => {
-//   // to 将要访问的路径
-//   // from 代表从哪个路径跳转而来
-//   // next 是一个函数，表示放行  next() 放行  next('/login') 强制跳转
-//   if (to.path === '/login' || to.path === '/forgetpwd') return next()
-//   const tokenStr = window.sessionStorage.getItem('token')
-//   if (!tokenStr) return next('/login')
-//   next()
-// })
+router.beforeEach((to, from, next) => {
+  // to 将要访问的路径
+  // from 代表从哪个路径跳转而来
+  // next 是一个函数，表示放行  next() 放行  next('/login') 强制跳转
+  if (to.path === '/login' || to.path === '/forgetpwd') return next()
+  const tokenStr = window.sessionStorage.getItem('token')
+  if (!tokenStr) return next('/login')
+  next()
+})
 
 export default router

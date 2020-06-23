@@ -5,7 +5,18 @@
         <img src="../assets/logo.png" alt />
         <span>Yunsign</span>
       </div>
-      <el-button type="info" @click="logout">退出</el-button>
+      <div>
+        <img src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80" />
+        <!-- <el-button type="info" @click="logout">退出</el-button> -->
+        <el-dropdown >
+          <span class="el-dropdown-link">
+            {{ username }}<i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item @click.native="logout">退出</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
     </el-header>
     <el-container>
       <el-aside :width="isCollapse ? '64px' : '200px'">
@@ -42,9 +53,11 @@
 </template>
 
 <script>
+import { MessageBox } from 'element-ui'
 export default {
   data () {
     return {
+      username: '',
       menulist: [
         {
           authName: '用户管理',
@@ -72,11 +85,16 @@ export default {
           path: 'rights'
         },
         {
-          authName: '院校管理',
+          authName: '课程管理',
           children: [{
             authName: '院校列表',
             id: 121,
             path: 'schools'
+          },
+          {
+            authName: '课程列表',
+            id: 122,
+            path: 'course'
           }],
           id: 120,
           path: 'schools'
@@ -119,8 +137,16 @@ export default {
   },
   methods: {
     logout () {
-      window.sessionStorage.clear()
-      this.$router.push('/login')
+      MessageBox.confirm('确认退出吗？', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        window.sessionStorage.clear()
+        this.$router.push('/login')
+      }).catch(() => {})
+      // window.sessionStorage.clear()
+      // this.$router.push('/login')
     },
     // async getMenuList () {
     //   const { data } = await this.$http.get('menus')
@@ -152,10 +178,11 @@ export default {
     toggleCollapse () {
       this.isCollapse = !this.isCollapse
     }
+  },
+  created () {
+    this.username = sessionStorage.getItem('username')
+    console.log(this.username)
   }
-  // created () {
-  //   this.getMenuList()
-  // }
 }
 </script>
 
@@ -205,4 +232,11 @@ export default {
   letter-spacing: 0.2em;
   cursor: pointer;
 }
+.el-dropdown-link {
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 16px;
+  }
 </style>

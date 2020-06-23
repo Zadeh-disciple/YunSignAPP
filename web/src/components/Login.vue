@@ -39,8 +39,8 @@ export default {
     return {
       // 数据绑定
       loginForm: {
-        username: 'admin',
-        password: '123456'
+        username: 'du',
+        password: 'du'
       },
       keeplogin: false,
       // 登录规则
@@ -62,10 +62,13 @@ export default {
     login () {
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return
-        const { data: res } = await this.$http.post('login', this.loginForm)
-        if (res.meta.status !== 200) return this.$message.error('登录失败！')
+        const data = await this.$http.post('api/login', this.loginForm)
+        console.log(data)
+        if (data.data.status === 'failed') return this.$message.error(data.data.message)
         this.$message.success('登陆成功！')
-        window.sessionStorage.setItem('token', res.data.token)
+        // window.sessionStorage.setItem('token', res.data.token)
+        window.sessionStorage.setItem('token', data.data.token)
+        window.sessionStorage.setItem('username', this.loginForm.username)
         this.$router.push('/home')
       })
     }

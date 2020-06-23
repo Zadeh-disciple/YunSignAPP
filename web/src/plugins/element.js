@@ -28,7 +28,11 @@ import {
   Switch,
   Tag,
   Tree,
-  Checkbox
+  Checkbox,
+  Cascader,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu
 } from 'element-ui'
 
 Vue.use(Button)
@@ -59,4 +63,8 @@ Vue.use(Switch)
 Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Checkbox)
+Vue.use(Cascader)
+Vue.use(Dropdown)
+Vue.use(DropdownItem)
+Vue.use(DropdownMenu)
 Vue.prototype.$message = Message
